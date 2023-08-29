@@ -72,7 +72,7 @@ function draw() {
         let [xFinal, yFinal] = inp_to_dc(x, y, [xMin, xMax], [yMin, yMax]);
 
         if (xFinal && yFinal) {
-            desenharPixel(xFinal, yFinal);
+            desenharPixel(xFinal, ALTURA - yFinal);
         }
     }
 

@@ -61,6 +61,7 @@ function desenharPixel(x, y, cor = "red") {
 //Função da lib p5.js
 function draw() {
     document.querySelector('#desenhar').onclick = () => {
+        background(0);
         // inputs do html
         const x = document.querySelector('#x').value;
         const xMax = document.querySelector('#xMax').value;
@@ -74,6 +75,6 @@ function draw() {
         if (xFinal && yFinal) {
             desenharPixel(xFinal, ALTURA - yFinal);
         }
+        updatePixels();
     }
-
 }

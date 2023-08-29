@@ -33,7 +33,7 @@ function inp_to_ndc(x, y, intervalo_inp_x, intervalo_inp_y) {
     let ndcx = ((2 * (x - xmin)) / (xmax - xmin)) - 1;
     let ndcy = ((2 * (y - ymin)) / (ymax - ymin)) - 1;
 
-    console.log([ndcx, ndcy]);
+    console.log([`ndcx: ${ndcx}`, `ndcy: ${ndcy}`]);
     return [ndcx, ndcy];
 }
 
@@ -42,7 +42,7 @@ function ndc_to_dc(ndcx, ndcy, intervalo_dc_x, intervalo_dc_y) {
     let dcx = Math.round(((ndcx + 1) * (ndh - 1)) / 2);
     let dcy = Math.round(((ndcy + 1) * (ndv - 1)) / 2);
 
-    console.log([dcx, dcy]);
+    console.log([`dcx: ${dcx}`, `dcy: ${dcy}`]);
     return [dcx, dcy];
 }
 
@@ -55,7 +55,7 @@ function inp_to_dc(x, y, intervalo_inp_x, intervalo_inp_y) {
 function desenharPixel(x, y, cor = "red") {
     stroke(255, 0, 0);
     strokeWeight(2)
-    point(x, y);
+    point(x, y); 
 }
 
 //Função da lib p5.js
